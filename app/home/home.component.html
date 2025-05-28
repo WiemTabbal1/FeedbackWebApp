@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, 
+    initial-scale=1.0">
+  <title>IFA - Menu</title>
+  <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+  
+  <link rel="stylesheet" href="home.component.scss"/>
+  
+</head>
+<body>
+	<div class="container">
+		<nav>
+		<div style="margin: 10px;">
+				<img src="assets/img/draexlmaier.png" alt="" width="250px">
+			</div>
+		<ul class="sidebar-menu">
+		  <li><a a routerLink="/home"><i class="fa fa-home"></i>Accueil</a></li>
+		  <li><a routerLink="/listedefaut"><i class="fa fa-suitcase"></i>Défauts</a></li>
+		  <li><a routerLink="/login"><i class="fa fa-sign-out-alt"></i>Déconnexion</a></li>
+		</ul>
+	  </nav>
+
+	    </div>
+		<section>
+			<div class="content">
+				
+			  
+			  <aside>
+				<h2>Ajouter un défaut</h2>
+				<form>
+				
+				  <div>
+					<label for="date">Date et heure</label>
+					<input type="datetime-local" [(ngModel)]="date" [ngModelOptions]="{standalone: true}" class="form-control" id="date" name="date">
+				  </div>
+
+				  <div>
+					<label for="ksk">Matricule chef d'équipe </label>
+					<input type="text" [(ngModel)]="matriculeeq" [ngModelOptions]="{standalone: true}"  class="form-control" id="matriculeeq" class="form-control"name="matriculeeq">
+
+					
+				  </div>
+
+				  <div>
+					<label for="ksk">Matricule chef de poste </label>
+					<input type="text" [(ngModel)]="matriculepo" [ngModelOptions]="{standalone: true}"  class="form-control"  id="matriculepo"class="form-control" name="matriculepo">
+				  </div>
+
+				  <div>
+					<label for="ksk">Numéro de KSK </label>
+					<input type="text" [(ngModel)]="ksk" [ngModelOptions]="{standalone: true}"  class="form-control"class="form-control"id="ksk"class="form-control" name="ksk">
+					
+				  </div>
+
+				  <div>
+					<label for="code">Type de défaut </label>
+					<input id="code" name="code" [(ngModel)]="code" [ngModelOptions]="{ standalone: true }" class="form-control">
+
+					<select id="code" name="code" [(ngModel)]="code" [ngModelOptions]="{ standalone: true }" class="form-control">
+						<option value="">Sélectionnez le type de défaut</option>
+						<option value="Montage Fils Inverses">Montage Fils Inverses</option>
+						<option value="Wakler">Wakler</option>
+						<option value="Connecteur Endommagé">Connecteur Endommagé</option>
+						<option value="Connecteur Non-Verrouillé">Connecteur Non-Verrouillé</option>
+						<option value="Joint d'etanchité manquant">Joint d'etanchité manquant</option>
+						  <option value="Verrouillage cosse non-clippé">Verrouillage cosse non-clippé</option>
+						  <option value="Ruban d'attache type incorrecte">Ruban d'attache type incorrecte</option>
+						  <option value="Autre">Autre</option>
+					  </select>
+				  </div>
+				  
+				  
+				  <div>
+					<label for="position">Position </label>
+					<input type="text" [(ngModel)]="position" [ngModelOptions]="{standalone: true}"  class="form-control"class="form-control" id="position" class="form-control"name="position">
+					<select type="text" [(ngModel)]="position" [ngModelOptions]="{standalone: true}"  class="form-control"class="form-control" id="position" class="form-control"name="position">
+						
+					<option value="ESPB">ESPB</option>
+						<option value="xyz789">xyz789</option>
+						<option value="wmg2">wmg2</option>
+						<option value="1tlenk6">1tlenk6</option>
+	
+					</select>
+				  </div>
+				  <div>
+					<label for="case">Numéro de case </label>
+					<input type="text" [(ngModel)]="case" [ngModelOptions]="{standalone: true}"  class="form-control"class="form-control" id="case"class="form-control" name="case">
+
+					<select type="text" [(ngModel)]="case" [ngModelOptions]="{standalone: true}"  class="form-control"class="form-control" id="case"class="form-control" name="case">
+						<option value="1">1</option>
+						<option value="2">2</option>
+						<option value="3">3</option>
+						<option value="6">6</option>
+						<option value="4">4</option>
+					</select>
+				  </div>
+				  <div>
+					<label for="case">Tackt </label>
+					<input type="text" [(ngModel)]="tackt" [ngModelOptions]="{standalone: true}"  class="form-control"class="form-control" id="tackt"class="form-control" name="tackt">
+					
+				  </div>
+				  
+
+				 
+				  <button type="submit"class="btn btn-primary" (click)="save()">Ajouter le défaut</button>
+				  
+				  
+				</form>
+			  </aside>
+			</div>
+
+		</section>
+        <footer>
+            <p>IFA © 2023</p>
+         </footer>
+	
+</body>
+</html>

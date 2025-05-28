@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>IFA - Authentification</title>
+    <link rel="stylesheet" type="text/css" href="login.component.scss">
+  </head>
+  <body>
+    <header>
+      <div style="margin: 10px;">
+        <img src="assets/img/draexlmaier.png" alt="" width="200px">
+      </div>
+    </header>
+    <main>
+      <div class="center">
+        <h1>Authentification</h1>
+        <form method="post" action="https://example.com/authenticate">
+          <div class="txt_field">
+            <input type="text" [(ngModel)]="numerostation" [ngModelOptions]="{standalone: true}" class="form-control" id="numerostation"  placeholder="Entrez votre numero de station">
+            <span></span>
+            <label>Numéro de la station</label>
+          </div>
+          <div class="txt_field">
+            <input type="password" [(ngModel)]="password" [ngModelOptions]="{standalone: true}" class="form-control" id="password" class="form-control" placeholder="Entrez votre mot de passe">
+            <span></span>
+            <label>Mot de passe</label>
+          </div>
+          <div class="pass"><a href="https://example.com/forgot-password">Mot de passe oublié ?</a></div>
+          <input type="submit" class="btn btn-primary" (click)="Login()"value="S'authentifier">
+          <div class="signup_link">
+            <a routerLink="/register">Créer un nouveau compte</a>
+
+          </div>
+        </form>
+      </div>
+   </main>
+   <footer>
+      <p>IFA © 2023</p>
+   </footer>
+</body>
+</html>
+

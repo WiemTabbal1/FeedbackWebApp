@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, 
+    initial-scale=1.0">
+  <title>IFA - Menu</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+  
+  <link rel="stylesheet" href="listeutilisateur.component.scss"/>
+  
+</head>
+<body>
+	<div class="container">
+		<nav>
+    
+      
+		<div style="margin: 10px;">
+				<img src="assets/img/draexlmaier.png" alt="" width="250px">
+			</div>
+		<ul class="sidebar-menu">
+		  <li><a routerLink="/homeadmin"><i class="fa fa-home"></i>Accueil</a></li>
+		  <li><a routerLink="/listedefautadmin"><i class="fa fa-suitcase"></i>Défauts</a></li>
+          <li><a routerLink="/listeutilisateur"><i class="fa fa-user"></i>Utilisateurs</a></li>
+		  <li><a routerLink="/administrateur"><i class="fa fa-sign-out-alt"></i>Déconnexion</a></li>
+		
+		 
+		</ul>
+	  </nav>
+
+	    </div>
+		<section>
+			<div class="content">
+				<h2>Liste des Utilisateurs</h2>
+				<table>
+					<thead>
+					  <tr>
+						<th>Nom</th>
+						<th>Numéro de le station</th>
+						<th>Mot de passe</th>
+					  </tr>
+					</thead>
+					<tbody>
+					  <tr *ngFor="let item of data">
+						<td>{{ item.employeename }}</td>
+						<td>{{ item.numerostation }}</td>
+						<td>{{ item.password}}</td>
+						
+
+					  </tr>
+					</tbody>
+				  </table>
+				
+
+				  
+			  
+			  
+			</div>
+
+		</section>
+		
+
+    
+	
+</body>
+</html>

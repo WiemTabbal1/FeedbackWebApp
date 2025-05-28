@@ -1,0 +1,116 @@
+/* général */
+/* Styles de base */
+body {
+	margin: 0;
+	padding: 0;
+	background: linear-gradient(120deg,#08899d,#07ffd6, #08899d);
+	font-family: Arial, sans-serif;
+  }
+  header {
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+  }
+  form {
+	margin: 50px auto;
+	width: 40%;
+	padding: 20px;
+	background-color: #fff;
+	box-shadow: 0 0 10px rgba(0,0,0,0.3);
+	border-radius: 5px;
+  }
+  
+  main {
+	padding: 5% 10%;
+  }
+  
+  h1 {
+	text-align: center;
+  }
+  
+  p {
+	font-size: 18px;
+	line-height: 1.5;
+  }
+  
+  label {
+	display: block;
+	margin-top: 10px;
+  }
+  
+  input[type=text],
+  input[type=email],
+  input[type=password] {
+	width: 100%;
+	padding: 10px;
+	border-radius: 5px;
+	border: none;
+	background-color: #f2f2f2;
+	margin-top: 5px;
+	margin-bottom: 10px;
+	box-sizing: border-box;
+	font-size: 16px;
+  }
+  
+  button[type=submit] {
+	background-color: #08899d;
+	color: #fff;
+	padding: 10px 20px;
+	border: none;
+	border-radius: 5px;
+	font-size: 16px;
+	cursor: pointer;
+	margin-top: 10px;
+  }
+  
+  footer {
+	
+	color: #000000;
+	padding: 20px;
+	text-align: center;
+  }
+  
+  
+  /* Media queries pour la conception responsive */
+  
+  /* Les formulaires prennent 80% de la largeur de l'écran sur les petits écrans */
+  @media (max-width: 768px) {
+	form {
+	  width: 80%;
+	}
+  }
+  
+  /* Les tailles de police et de padding sont ajustées pour les petits écrans */
+  @media (max-width: 480px) {
+	input[type=text],
+	input[type=email],
+	input[type=password] {
+	  font-size: 14px;
+	  padding: 8px;
+	}
+  
+	button[type=submit] {
+	  font-size: 14px;
+	  padding: 8px 16px;
+	}
+  
+    footer {
+        background-color: linear-gradient(120deg,#08899d, #f2f2f2);;
+          color: #000000;
+          padding: 20px;
+          text-align: center;
+      }
+      
+  }
+  button {
+	background-color: #08899d;
+	color: #fff;
+	cursor: pointer;
+	transition: background-color 0.2s ease-in-out;
+  }
+  
+  button:hover {
+	background-color: #777;
+  }

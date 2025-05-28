@@ -1,0 +1,39 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>IFA - Créer un compte</title>
+	<link rel="stylesheet" type="text/css" href="registeradmin.component.scss">
+</head>
+<body>
+  <header>
+    <div style="margin: 10px;">
+      <img src="assets/img/draexlmaier.png" alt="" width="200px">
+    </div>
+  </header>
+	  <main>
+		<form>
+			<h1>Créer un compte</h1>
+	
+			<label for="nom">Nom </label>
+			<input type="text" [(ngModel)]="adminname" [ngModelOptions]="{standalone: true}"  class="form-control" id="name" class="form-control" placeholder="Entrez votre nom">
+
+	
+			<label for="email">Email </label>
+			<input type="email" [(ngModel)]="email" [ngModelOptions]="{standalone: true}" class="form-control" id="email"  placeholder="Entrez votre email">
+
+	
+			<label for="motdepasse">Mot de passe </label>
+			<input type="password" [(ngModel)]="password" [ngModelOptions]="{standalone: true}" class="form-control" id="password" class="form-control" placeholder="Entrez votre mot de passe">
+
+
+	
+			<button type="submit"class="btn btn-primary" (click)="save()">Créer un compte</button>
+		</form>
+	  </main>
+	  <footer>
+		<p>IFA © 2023</p>
+	</footer>
+	
+</body>
+</html>
